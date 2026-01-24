@@ -41,7 +41,7 @@ export default function WorkProjectCard({
   type = "work",
   itemVariants,
   href,
-  calltoAction = true,
+  calltoAction = false,
   onClick,
 }: WorkProjectCardProps) {
   const [isHovered, setIsHovered] = useState(false);

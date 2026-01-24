@@ -1,36 +1,49 @@
-'use client'
+"use client";
 
-import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion'
-import { useEffect, useState, useRef } from 'react'
-import Image from 'next/image'
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useReducedMotion,
+} from "framer-motion";
+import { useEffect, useState, useRef } from "react";
+import Image from "next/image";
 
 export default function Hero() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-  const ref = useRef(null)
-  const prefersReducedMotion = useReducedMotion()
-  
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const ref = useRef(null);
+  const prefersReducedMotion = useReducedMotion();
+
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['start start', 'end start'],
-  })
+    offset: ["start start", "end start"],
+  });
 
-  const y = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? ['0%', '0%'] : ['0%', '50%'])
-  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0])
-  const scale = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? [1, 1] : [1, 0.8])
+  const y = useTransform(
+    scrollYProgress,
+    [0, 1],
+    prefersReducedMotion ? ["0%", "0%"] : ["0%", "50%"],
+  );
+  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+  const scale = useTransform(
+    scrollYProgress,
+    [0, 1],
+    prefersReducedMotion ? [1, 1] : [1, 0.8],
+  );
 
   useEffect(() => {
-    if (prefersReducedMotion) return
-    
+    if (prefersReducedMotion) return;
+
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({
         x: (e.clientX / window.innerWidth - 0.5) * 30,
         y: (e.clientY / window.innerHeight - 0.5) * 30,
-      })
-    }
+      });
+    };
 
-    window.addEventListener('mousemove', handleMouseMove)
-    return () => window.removeEventListener('mousemove', handleMouseMove)
-  }, [prefersReducedMotion])
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, [prefersReducedMotion]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -41,7 +54,7 @@ export default function Hero() {
         delayChildren: prefersReducedMotion ? 0 : 0.2,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { y: prefersReducedMotion ? 0 : 40, opacity: 0 },
@@ -53,10 +66,14 @@ export default function Hero() {
         ease: [0.25, 0.4, 0.25, 1],
       },
     },
-  }
+  };
 
   const imageVariants = {
-    hidden: { scale: prefersReducedMotion ? 1 : 0.8, opacity: 0, rotate: prefersReducedMotion ? 0 : -5 },
+    hidden: {
+      scale: prefersReducedMotion ? 1 : 0.8,
+      opacity: 0,
+      rotate: prefersReducedMotion ? 0 : -5,
+    },
     visible: {
       scale: 1,
       opacity: 1,
@@ -67,33 +84,42 @@ export default function Hero() {
         delay: prefersReducedMotion ? 0 : 0.5,
       },
     },
-  }
+  };
 
   const scrollToContact = () => {
-    const element = document.getElementById('contact')
+    const element = document.getElementById("contact");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      element.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
 
   return (
-    <section id="home" ref={ref} className="min-h-screen flex items-center justify-center section-padding relative overflow-hidden" aria-labelledby="hero-heading">
+    <section
+      id="home"
+      ref={ref}
+      className="min-h-screen flex items-center justify-center section-padding relative overflow-hidden"
+      aria-labelledby="hero-heading"
+    >
       {/* Animated background lines */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        {!prefersReducedMotion && [...Array(5)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute h-px bg-border"
-            style={{
-              top: `${20 + i * 15}%`,
-              left: 0,
-              right: 0,
-            }}
-            initial={{ scaleX: 0, opacity: 0 }}
-            animate={{ scaleX: 1, opacity: 0.3 }}
-            transition={{ duration: 1.5, delay: i * 0.2, ease: 'easeOut' }}
-          />
-        ))}
+      <div
+        className="absolute inset-0 overflow-hidden pointer-events-none"
+        aria-hidden="true"
+      >
+        {!prefersReducedMotion &&
+          [...Array(5)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute h-px bg-border"
+              style={{
+                top: `${20 + i * 15}%`,
+                left: 0,
+                right: 0,
+              }}
+              initial={{ scaleX: 0, opacity: 0 }}
+              animate={{ scaleX: 1, opacity: 0.3 }}
+              transition={{ duration: 1.5, delay: i * 0.2, ease: "easeOut" }}
+            />
+          ))}
       </div>
 
       {/* Floating geometric shapes - hidden when reduced motion preferred */}
@@ -110,7 +136,7 @@ export default function Hero() {
             transition={{
               x: { duration: 0.3 },
               y: { duration: 0.3 },
-              rotate: { duration: 30, repeat: Infinity, ease: 'linear' },
+              rotate: { duration: 30, repeat: Infinity, ease: "linear" },
             }}
           />
           <motion.div
@@ -124,7 +150,7 @@ export default function Hero() {
             transition={{
               x: { duration: 0.3 },
               y: { duration: 0.3 },
-              scale: { duration: 4, repeat: Infinity, ease: 'easeInOut' },
+              scale: { duration: 4, repeat: Infinity, ease: "easeInOut" },
             }}
           />
         </>
@@ -151,7 +177,11 @@ export default function Hero() {
             </motion.p>
 
             {/* Name */}
-            <motion.h1 id="hero-heading" className="heading-1 mb-6" variants={itemVariants}>
+            <motion.h1
+              id="hero-heading"
+              className="heading-1 mb-6"
+              variants={itemVariants}
+            >
               Adrià Guilera
             </motion.h1>
 
@@ -169,7 +199,8 @@ export default function Hero() {
               variants={itemVariants}
             >
               Building AI-powered solutions and full-stack applications.
-              Exploring the intersection of software engineering and artificial intelligence.
+              Exploring the intersection of software engineering and artificial
+              intelligence.
             </motion.p>
 
             {/* CTA Button */}
@@ -191,25 +222,8 @@ export default function Hero() {
             className="order-1 lg:order-2 flex justify-center lg:justify-end"
             variants={imageVariants}
           >
-            <motion.div
-              className="relative w-72 h-72 md:w-96 md:h-96"
-              animate={prefersReducedMotion ? {} : {
-                y: [0, -15, 0],
-              }}
-              transition={prefersReducedMotion ? {} : {
-                duration: 4,
-                repeat: Infinity,
-                ease: 'easeInOut',
-              }}
-            >
-              <motion.div
-                className="absolute inset-0"
-                animate={prefersReducedMotion ? {} : {
-                  x: mousePosition.x * 0.1,
-                  y: mousePosition.y * 0.1,
-                }}
-                transition={{ duration: 0.2 }}
-              >
+            <motion.div className="relative w-72 h-72 md:w-96 md:h-96">
+              <motion.div>
                 <Image
                   src="/media/Saludo.jpg"
                   alt="Adrià Guilera waving hello"
@@ -219,14 +233,18 @@ export default function Hero() {
                   sizes="(max-width: 768px) 288px, 384px"
                 />
               </motion.div>
-              
+
               {/* Decorative elements around image */}
               {!prefersReducedMotion && (
                 <motion.div
                   className="absolute -inset-4 border border-border opacity-30"
                   aria-hidden="true"
                   animate={{ rotate: [0, 5, 0, -5, 0] }}
-                  transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
+                  transition={{
+                    duration: 10,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
                 />
               )}
             </motion.div>
@@ -244,12 +262,16 @@ export default function Hero() {
           >
             <motion.div
               animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
               className="w-6 h-10 border border-border rounded-full flex items-start justify-center p-2"
             >
               <motion.div
                 animate={{ y: [0, 12, 0] }}
-                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
                 className="w-1 h-2 bg-text rounded-full"
               />
             </motion.div>
@@ -257,5 +279,5 @@ export default function Hero() {
         )}
       </motion.div>
     </section>
-  )
+  );
 }
