@@ -145,17 +145,13 @@ const skills: Skill[] = [
   {
     name: 'AI Agents',
     icon: (
-      <svg viewBox="0 0 128 128" className="w-7 h-7">
-        <path fill="#1C1C1C" d="M64 8C33.1 8 8 33.1 8 64s25.1 56 56 56 56-25.1 56-56S94.9 8 64 8z" />
-        <path
-          fill="#fff"
-          d="M64 20c-24.3 0-44 19.7-44 44s19.7 44 44 44 44-19.7 44-44-19.7-44-44-19.7-44-44-19.7-44-44-44zm0 80c-19.9 0-36-16.1-36-36s16.1-36 36-36 36 16.1 36 36-16.1 36-36 36z"
-        />
-        <circle fill="#fff" cx="50" cy="55" r="6" />
-        <circle fill="#fff" cx="78" cy="55" r="6" />
-        <path fill="none" stroke="#fff" strokeWidth="4" strokeLinecap="round" d="M45 75c5.5 5.5 23.5 5.5 29 0" />
-        <path fill="#fff" d="M64 28v8M64 92v8M28 64h8M92 64h8" />
-      </svg>
+      <Image
+        src="/svgs/automatic-svgrepo-com.svg"
+        alt="AI Agents"
+        width={28}
+        height={28}
+        className="w-7 h-7"
+      />
     ),
   },
 ]

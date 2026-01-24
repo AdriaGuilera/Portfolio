@@ -109,7 +109,7 @@ export default function Contact() {
                   href={social.href}
                   target={social.href.startsWith('mailto:') ? undefined : '_blank'}
                   rel={social.href.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
-                  className="group p-6 border border-border hover:border-text bg-background transition-colors duration-300 min-h-[88px] focus-visible:ring-2 focus-visible:ring-text focus-visible:ring-offset-2 focus-visible:outline-none"
+                  className="group px-8 py-6 border border-border hover:border-text bg-background transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-text focus-visible:ring-offset-2 focus-visible:outline-none"
                   initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ delay: prefersReducedMotion ? 0 : (0.4 + index * 0.1), duration: prefersReducedMotion ? 0.01 : 0.5 }}
@@ -121,7 +121,7 @@ export default function Contact() {
                     <div className="text-textSecondary group-hover:text-text transition-colors">
                       {social.icon}
                     </div>
-                    <div className="text-xs uppercase tracking-widest">{social.label}</div>
+                    <div className="text-xs uppercase tracking-widest whitespace-nowrap">{social.label}</div>
                   </div>
                 </motion.a>
               ))}
