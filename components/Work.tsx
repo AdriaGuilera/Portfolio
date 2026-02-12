@@ -40,8 +40,16 @@ export default function Work() {
       category: "Full-Stack & AI Development",
       description:
         "Built multi-tenant AI agents using Python and LangChain ecosystem. Developed and maintained Nest.js backends and Flutter mobile apps. Implemented RAG systems and SQL agents for intelligent document retrieval and database querying using LLMs.",
-      tech: ["Python", "LangChain", "Nest.js", "Flutter", "RAG", "SQL Agents"],
-      year: "Feb 2024 – Present",
+      tech: [
+        "Python",
+        "LangChain",
+        "Nest.js",
+        "Flutter",
+        "RAG",
+        "SQL Agents",
+        "PostgreSQL",
+      ],
+      year: "Feb 2025 – Present",
     },
     {
       title: "AI Consulting for SMEs",
