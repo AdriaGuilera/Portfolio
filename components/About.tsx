@@ -73,13 +73,16 @@ export default function About() {
   ];
 
   const skills = [
-    "Python",
-    "LangChain & AI",
+    "Python & Go",
     "TypeScript",
+    "LangGraph & LangChain",
+    "FastAPI & Django",
     "Nest.js",
-    "Flutter & Dart",
-    "Angular",
-    "Docker & SQL",
+    "Flutter",
+    "PostgreSQL & Redis",
+    "Milvus & ClickHouse",
+    "AWS & Docker",
+    "LiveKit & Voice AI",
     "Git & C++",
   ];
 
@@ -219,23 +222,22 @@ export default function About() {
               <h3 className="heading-3 mb-6">Who I Am</h3>
               <div className="space-y-4 body-text mb-10">
                 <p>
-                  I'm a passionate Full Stack Developer and AI enthusiast from
-                  Barcelona, currently wrapping up my BS in Software Engineering
-                  at FIB UPC (graduating June 2026). The only thing remaining is
-                  my bachelor's thesis, which I'm developing around Knowledge
-                  Graphs and AI Agents.
+                  I'm a passionate Full Stack Developer and AI Software Engineer
+                  from Barcelona, with a BS in Software Engineering from FIB UPC.
+                  My bachelor's thesis explored Knowledge Graphs and AI Agents.
                 </p>
                 <p>
-                  Working full-stack at K·Factor, building mobile apps and AI
-                  agents. On the side, I'm developing Livea—an AI-powered
-                  ticketing system for real estate managers, and providing AI
-                  consulting for small and medium businesses.
+                  I'm an AI Software Engineer at Spoki, working on the AI layer
+                  of a multi-tenant WhatsApp messaging platform. Before that I
+                  introduced AI at K·Factor, where I owned it end to end. On the
+                  side, I'm developing Livea—an AI-powered ticketing system for
+                  real estate managers, and providing AI consulting for small and
+                  medium businesses.
                 </p>
                 <p>
                   I'm drawn to startups focused on real-world problems, shipping
-                  simple things that work rather than overengineering. I'm eager
-                  to transition more deeply into AI, learning as much as
-                  possible while contributing wherever I can.
+                  simple things that work rather than overengineering, and to
+                  going deep on AI systems that hold up in production.
                 </p>
                 <p>
                   When I'm not coding, you'll find me at the gym , or fishing by

@@ -35,11 +35,29 @@ export default function Work() {
 
   const workExperience = [
     {
+      title: "AI Software Engineer",
+      company: "Spoki",
+      category: "AI Engineering & Platform",
+      description:
+        "Moved all AI inference to EU-resident Gemini on Vertex for GDPR, adding benchmarks so agent quality holds across model updates. Migrated Milvus vector search and built the document ingestion pipeline. Built the platform's AI assistant, and improved and developed the voice agents on LiveKit, cutting latency from ~1s to 600ms. Created MCP servers and a Skills repository covering the company stack.",
+      tech: [
+        "Python",
+        "Go",
+        "Gemini on Vertex",
+        "LangGraph",
+        "Milvus",
+        "RAG",
+        "LiveKit",
+        "MCP",
+      ],
+      year: "Apr 2026 – Present",
+    },
+    {
       title: "Junior FullStack Developer",
       company: "K·Factor Technologies",
       category: "Full-Stack & AI Development",
       description:
-        "Built multi-tenant AI agents using Python and LangChain ecosystem. Developed and maintained Nest.js backends and Flutter mobile apps. Implemented RAG systems and SQL agents for intelligent document retrieval and database querying using LLMs.",
+        "Introduced AI to the company as its sole owner, with no prior AI product. Built multi-tenant AI agents using Python and LangChain ecosystem. Developed and maintained Nest.js backends and Flutter mobile apps. Implemented RAG systems and SQL agents for intelligent document retrieval and database querying using LLMs.",
       tech: [
         "Python",
         "LangChain",
@@ -49,7 +67,7 @@ export default function Work() {
         "SQL Agents",
         "PostgreSQL",
       ],
-      year: "Feb 2025 – Present",
+      year: "Feb 2024 – Apr 2026",
     },
     {
       title: "AI Consulting for SMEs",
@@ -58,7 +76,7 @@ export default function Work() {
       description:
         "Consulting for small and medium companies to integrate AI into workflows. Built HR chatbot on Microsoft Teams with RAG architecture. Developed email management platform with AI-powered sorting. Created document extraction pipeline reducing manual entry by 70%.",
       tech: ["Python", "RAG", "Microsoft Teams", "LLMs"],
-      year: "Feb 2025 – Present",
+      year: "Feb 2025 – Apr 2026",
     },
   ];
 

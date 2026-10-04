@@ -71,6 +71,54 @@ const skills: Skill[] = [
     ),
   },
   {
+    name: 'LangGraph',
+    icon: (
+      <Image
+        src="/svgs/langgraph-simpleicons.svg"
+        alt="LangGraph"
+        width={28}
+        height={28}
+        className="w-7 h-7"
+      />
+    ),
+  },
+  {
+    name: 'Go',
+    icon: (
+      <Image
+        src="/svgs/go-simpleicons.svg"
+        alt="Go"
+        width={28}
+        height={28}
+        className="w-7 h-7"
+      />
+    ),
+  },
+  {
+    name: 'FastAPI',
+    icon: (
+      <Image
+        src="/svgs/fastapi-simpleicons.svg"
+        alt="FastAPI"
+        width={28}
+        height={28}
+        className="w-7 h-7"
+      />
+    ),
+  },
+  {
+    name: 'Django',
+    icon: (
+      <Image
+        src="/svgs/django-simpleicons.svg"
+        alt="Django"
+        width={28}
+        height={28}
+        className="w-7 h-7"
+      />
+    ),
+  },
+  {
     name: 'Nest.js',
     icon: (
       <Image
@@ -112,6 +160,54 @@ const skills: Skill[] = [
       <Image
         src="/svgs/docker-svgrepo-com.svg"
         alt="Docker"
+        width={28}
+        height={28}
+        className="w-7 h-7"
+      />
+    ),
+  },
+  {
+    name: 'Milvus',
+    icon: (
+      <Image
+        src="/svgs/milvus-simpleicons.svg"
+        alt="Milvus"
+        width={28}
+        height={28}
+        className="w-7 h-7"
+      />
+    ),
+  },
+  {
+    name: 'Redis',
+    icon: (
+      <Image
+        src="/svgs/redis-simpleicons.svg"
+        alt="Redis"
+        width={28}
+        height={28}
+        className="w-7 h-7"
+      />
+    ),
+  },
+  {
+    name: 'ClickHouse',
+    icon: (
+      <Image
+        src="/svgs/clickhouse-simpleicons.svg"
+        alt="ClickHouse"
+        width={28}
+        height={28}
+        className="w-7 h-7"
+      />
+    ),
+  },
+  {
+    name: 'LiveKit',
+    icon: (
+      <Image
+        src="/svgs/livekit-simpleicons.svg"
+        alt="LiveKit"
         width={28}
         height={28}
         className="w-7 h-7"

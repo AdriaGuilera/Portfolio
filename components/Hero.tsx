@@ -190,7 +190,7 @@ export default function Hero() {
               className="text-xl md:text-2xl font-light text-textSecondary tracking-wide mb-8"
               variants={itemVariants}
             >
-              Junior Developer & AI Enthusiast
+              AI Software Engineer
             </motion.p>
 
             {/* Description */}
