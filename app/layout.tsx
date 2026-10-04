@@ -1,18 +1,20 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter } from 'next/font/google'
+import { Archivo } from 'next/font/google'
 import './globals.css'
 import Navigation from '@/components/Navigation'
 import SkipLink from '@/components/SkipLink'
+import SiteScripts from '@/components/SiteScripts'
 
-const inter = Inter({ 
+const archivo = Archivo({
   subsets: ['latin'],
-  weight: ['300', '400'],
+  weight: ['400', '500', '600', '700'],
   display: 'swap',
+  variable: '--font-archivo',
 })
 
 export const metadata: Metadata = {
   title: 'Adrià Guilera Bernabé | Portfolio',
-  description: 'Personal portfolio of Adrià Guilera Bernabé - Developer & Creator',
+  description: 'Personal portfolio of Adrià Guilera Bernabé, AI Software Engineer in Barcelona',
 }
 
 export const viewport: Viewport = {
@@ -26,12 +28,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={archivo.variable}>
         <SkipLink />
         <Navigation />
-        <main id="main-content">
+        <main id="main">
           {children}
         </main>
+        <SiteScripts />
       </body>
     </html>
   )

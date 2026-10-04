@@ -3,8 +3,8 @@
 export default function SkipLink() {
   return (
     <a
-      href="#main-content"
-      className="skip-link"
+      href="#main"
+      className="skip"
     >
       Skip to content
     </a>
