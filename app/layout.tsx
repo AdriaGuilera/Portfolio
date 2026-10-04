@@ -12,7 +12,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'Adrià Guilera Bernabé | Portfolio',
-  description: 'Personal portfolio of Adrià Guilera Bernabé - Developer & Creator',
+  description: 'Personal portfolio of Adrià Guilera Bernabé, AI Software Engineer in Barcelona',
 }
 
 export const viewport: Viewport = {

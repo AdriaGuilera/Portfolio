@@ -82,23 +82,6 @@ export default function Work() {
 
   const projects = [
     {
-      title: "Livea - AI Ticketing System",
-      company: "Personal Project",
-      category: "AI Development",
-      description:
-        "Building an AI-powered ticketing system for real estate managers with WhatsApp integration. Automating customer service and making property management more efficient.",
-      tech: [
-        "Python",
-        "LangChain",
-        "WhatsApp API",
-        "AI Agents",
-        "React",
-        "Nest.js",
-        "FastAPI",
-      ],
-      year: "Dec 2025 – Present",
-    },
-    {
       title: "For Fun Projects",
       company: "Personal",
       category: "Exploration & Learning",

@@ -198,9 +198,8 @@ export default function Hero() {
               className="body-text max-w-lg mb-10"
               variants={itemVariants}
             >
-              Building AI-powered solutions and full-stack applications.
-              Exploring the intersection of software engineering and artificial
-              intelligence.
+              I build AI tools that remove friction from people's day-to-day
+              work — LLM agents, retrieval and real-time voice.
             </motion.p>
 
             {/* CTA Button */}

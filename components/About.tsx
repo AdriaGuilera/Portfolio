@@ -227,12 +227,8 @@ export default function About() {
                   My bachelor's thesis explored Knowledge Graphs and AI Agents.
                 </p>
                 <p>
-                  I'm an AI Software Engineer at Spoki, working on the AI layer
-                  of a multi-tenant WhatsApp messaging platform. Before that I
-                  introduced AI at K·Factor, where I owned it end to end. On the
-                  side, I'm developing Livea—an AI-powered ticketing system for
-                  real estate managers, and providing AI consulting for small and
-                  medium businesses.
+                  These days I work on production AI: LLM agents, retrieval and
+                  real-time voice.
                 </p>
                 <p>
                   I'm drawn to startups focused on real-world problems, shipping
@@ -240,7 +236,7 @@ export default function About() {
                   going deep on AI systems that hold up in production.
                 </p>
                 <p>
-                  When I'm not coding, you'll find me at the gym , or fishing by
+                  When I'm not building, you'll find me at the gym or fishing by
                   the sea.
                 </p>
               </div>
