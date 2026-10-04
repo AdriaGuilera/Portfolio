@@ -31,3 +31,12 @@ yarn-error.log*
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local agent tooling (editor/agent scratch, not part of the site)
+.agents/
+.claude/
+.codex/
+skills-lock.json
+
+# Design explorations and measurement harnesses (kept local, deliberately not published)
+public/designs/
