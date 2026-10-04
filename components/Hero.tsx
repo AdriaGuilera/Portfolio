@@ -198,8 +198,8 @@ export default function Hero() {
               className="body-text max-w-lg mb-10"
               variants={itemVariants}
             >
-              I build AI tools that remove friction from people's day-to-day
-              work — LLM agents, retrieval and real-time voice.
+              I make AI take care of the boring stuff, so humans can focus on
+              what really matters.
             </motion.p>
 
             {/* CTA Button */}
