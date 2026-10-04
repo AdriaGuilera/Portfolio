@@ -235,8 +235,9 @@ export default function About() {
                   going deep on AI systems that hold up in production.
                 </p>
                 <p>
-                  When I'm not building, you'll find me at the gym or fishing by
-                  the sea.
+                  Aside from coding and building, I enjoy going to the gym,
+                  spending time with friends and family and going fishing
+                  whenever the weather allows it.
                 </p>
               </div>
             </motion.div>
