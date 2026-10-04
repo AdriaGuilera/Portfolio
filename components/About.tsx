@@ -222,13 +222,12 @@ export default function About() {
               <h3 className="heading-3 mb-6">Who I Am</h3>
               <div className="space-y-4 body-text mb-10">
                 <p>
-                  I'm a passionate Full Stack Developer and AI Software Engineer
-                  from Barcelona, with a BS in Software Engineering from FIB UPC.
-                  My bachelor's thesis explored Knowledge Graphs and AI Agents.
+                  I'm a passionate AI Software Engineer from Barcelona, with a BS
+                  in Software Engineering from FIB UPC.
                 </p>
                 <p>
-                  These days I work on production AI: LLM agents, retrieval and
-                  real-time voice.
+                  These days I work on AI platform assistants, AI text agents and
+                  real-time voice agents.
                 </p>
                 <p>
                   I'm drawn to startups focused on real-world problems, shipping
