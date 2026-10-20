@@ -14,9 +14,9 @@ export default function Contact() {
           </a>
         </li>
         <li>
-          <a className="contact__row" href="https://www.linkedin.com/in/adri%C3%A0-guilera-2555881a8/" target="_blank" rel="noopener noreferrer">
+          <a className="contact__row" href="https://www.linkedin.com/in/adria-guilera" target="_blank" rel="noopener noreferrer">
             <span className="contact__net">LinkedIn</span>
-            <span className="contact__val">/in/adria.guilera</span>
+            <span className="contact__val">/in/adria-guilera</span>
             <span className="contact__arrow" aria-hidden="true">&#8599;</span>
           </a>
         </li>
