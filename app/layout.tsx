@@ -1,40 +1,33 @@
 import type { Metadata, Viewport } from 'next'
-import { Archivo } from 'next/font/google'
+import { JetBrains_Mono } from 'next/font/google'
+import Shell from '@/components/Shell'
 import './globals.css'
-import Navigation from '@/components/Navigation'
-import SkipLink from '@/components/SkipLink'
-import SiteScripts from '@/components/SiteScripts'
 
-const archivo = Archivo({
+const mono = JetBrains_Mono({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '700'],
   display: 'swap',
-  variable: '--font-archivo',
+  variable: '--font-mono',
 })
 
 export const metadata: Metadata = {
-  title: 'Adrià Guilera Bernabé | Portfolio',
+  title: { default: 'Adrià Guilera Bernabé | Portfolio', template: '%s | Adrià Guilera' },
   description: 'Personal portfolio of Adrià Guilera Bernabé, AI Software Engineer in Barcelona',
 }
 
 export const viewport: Viewport = {
-  themeColor: '#ffffff',
+  themeColor: '#0a1719',
+  colorScheme: 'dark',
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={archivo.variable}>
-        <SkipLink />
-        <Navigation />
-        <main id="main">
-          {children}
-        </main>
-        <SiteScripts />
+      <body className={mono.variable}>
+        <a className="skip" href="#main">
+          Skip to content
+        </a>
+        <Shell>{children}</Shell>
       </body>
     </html>
   )

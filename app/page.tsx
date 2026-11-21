@@ -1,17 +1,11 @@
-import Hero from '@/components/Hero'
-import About from '@/components/About'
-import Work from '@/components/Work'
-import Contact from '@/components/Contact'
-import Footer from '@/components/Footer'
+import { profile } from '@/lib/content'
 
 export default function Home() {
   return (
-    <>
-      <Hero />
-      <About />
-      <Work />
-      <Contact />
-      <Footer />
-    </>
+    <main className="intro" id="main">
+      <h1>{profile.name}</h1>
+      <p>{profile.role}</p>
+      <p>{profile.lede}</p>
+    </main>
   )
 }
